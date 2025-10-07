@@ -19,9 +19,20 @@
 
 @layer components {
   .body-surface {
+    /* Dark mode background */
     background: radial-gradient(ellipse at top left, rgba(15, 23, 42, 0.1) 0%, transparent 50%),
-      radial-gradient(ellipse at top right, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at top right, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom center, rgba(20, 184, 166, 0.08) 0%, transparent 60%),
       linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background-attachment: fixed;
+  }
+
+  .light .body-surface {
+    /* Light mode background - improved */
+    background: radial-gradient(ellipse at top left, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at top right, rgba(20, 184, 166, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom center, rgba(59, 130, 246, 0.06) 0%, transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #f8fafc 30%, #f1f5f9 70%, #e2e8f0 100%);
     background-attachment: fixed;
   }
 
@@ -31,8 +42,22 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  .light .glass-effect {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
   .text-gradient {
-    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .light .text-gradient {
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #0d9488 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -45,5 +70,10 @@
   .hover-lift:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .light .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   }
 }

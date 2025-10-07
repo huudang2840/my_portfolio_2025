@@ -46,8 +46,8 @@ export default function AboutPage() {
     <div className="space-y-20">
       {/* Hero Section */}
       <header className="text-center space-y-8 animate-fade-in">
-        <h1 className="font-display text-5xl md:text-6xl font-bold">About Me</h1>
-        <p className="text-xl text-slate-400 max-w-4xl mx-auto leading-relaxed">
+        <h1 className="font-display text-5xl md:text-6xl font-bold text-white  ">About Me</h1>
+        <p className="text-xl text-slate-400   max-w-4xl mx-auto leading-relaxed">
           I'm a passionate software engineer focused on building scalable backend systems and
           AI-powered solutions. My approach is simple: clean architecture, measurable results, and
           maintainable code.
@@ -57,10 +57,12 @@ export default function AboutPage() {
       {/* Skills Section */}
       <section className="space-y-12">
         <div className="text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white  ">
             Skills & Technologies
           </h2>
-          <p className="text-slate-400 text-lg">Technologies I work with to bring ideas to life</p>
+          <p className="text-slate-400   text-lg">
+            Technologies I work with to bring ideas to life
+          </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -70,11 +72,11 @@ export default function AboutPage() {
               className="glass-effect rounded-3xl p-6 hover-lift animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="font-bold text-lg mb-4 text-brand-400">{skill.category}</h3>
+              <h3 className="font-bold text-lg mb-4 text-accent-300  ">{skill.category}</h3>
               <ul className="space-y-2">
                 {skill.items.map((item) => (
-                  <li key={item} className="text-slate-300 text-sm flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-brand-400 rounded-full"></div>
+                  <li key={item} className="text-slate-300   text-sm flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-accent-400   rounded-full"></div>
                     {item}
                   </li>
                 ))}
@@ -87,15 +89,17 @@ export default function AboutPage() {
       {/* Timeline Section */}
       <section className="space-y-12">
         <div className="text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">My Journey</h2>
-          <p className="text-slate-400 text-lg">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white  ">
+            My Journey
+          </h2>
+          <p className="text-slate-400   text-lg">
             Key milestones and projects that shaped my career
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-brand-500 to-accent-500"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-500 to-ocean-500"></div>
 
             <div className="space-y-12">
               {timeline.map((item, index) => (
@@ -109,10 +113,10 @@ export default function AboutPage() {
                   </div>
                   <div className="flex-1 glass-effect rounded-3xl p-6 hover-lift">
                     <div className="flex items-center gap-4 mb-3">
-                      <span className="text-brand-400 font-bold text-lg">{item.year}</span>
-                      <h3 className="font-bold text-xl">{item.title}</h3>
+                      <span className="text-accent-300   font-bold text-lg">{item.year}</span>
+                      <h3 className="font-bold text-xl text-white  ">{item.title}</h3>
                     </div>
-                    <p className="text-slate-300 leading-relaxed">{item.desc}</p>
+                    <p className="text-slate-300   leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -124,12 +128,14 @@ export default function AboutPage() {
       {/* Philosophy Section */}
       <section className="text-center">
         <div className="glass-effect rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">My Philosophy</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-white  ">
+            My Philosophy
+          </h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div className="space-y-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-brand-500 to-accent-500 rounded-full flex items-center justify-center mx-auto">
+              <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-ocean-500 rounded-full flex items-center justify-center mx-auto">
                 <svg
-                  className="w-6 h-6 text-white"
+                  className="w-6 h-6 text-white  "
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -142,15 +148,15 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-bold text-lg">Simple</h3>
-              <p className="text-slate-400 text-sm">
+              <h3 className="font-bold text-lg text-white  ">Simple</h3>
+              <p className="text-slate-400   text-sm">
                 Clean, readable code that anyone can understand and maintain
               </p>
             </div>
             <div className="space-y-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-brand-500 to-accent-500 rounded-full flex items-center justify-center mx-auto">
+              <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-ocean-500 rounded-full flex items-center justify-center mx-auto">
                 <svg
-                  className="w-6 h-6 text-white"
+                  className="w-6 h-6 text-white  "
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -169,15 +175,15 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-bold text-lg">Maintainable</h3>
-              <p className="text-slate-400 text-sm">
+              <h3 className="font-bold text-lg text-white  ">Maintainable</h3>
+              <p className="text-slate-400   text-sm">
                 Code that's easy to extend, debug, and improve over time
               </p>
             </div>
             <div className="space-y-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-brand-500 to-accent-500 rounded-full flex items-center justify-center mx-auto">
+              <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-ocean-500 rounded-full flex items-center justify-center mx-auto">
                 <svg
-                  className="w-6 h-6 text-white"
+                  className="w-6 h-6 text-white  "
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -190,8 +196,8 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-bold text-lg">Measurable</h3>
-              <p className="text-slate-400 text-sm">
+              <h3 className="font-bold text-lg text-white  ">Measurable</h3>
+              <p className="text-slate-400   text-sm">
                 Results-driven development with clear metrics and performance indicators
               </p>
             </div>

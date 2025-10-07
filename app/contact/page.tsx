@@ -6,8 +6,8 @@ export default function ContactPage() {
     <div className="space-y-20">
       {/* Hero Section */}
       <header className="text-center space-y-8 animate-fade-in">
-        <h1 className="font-display text-5xl md:text-6xl font-bold text-white">Get in Touch</h1>
-        <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+        <h1 className="font-display text-5xl md:text-6xl font-bold text-white  ">Get in Touch</h1>
+        <p className="text-xl text-slate-400   max-w-3xl mx-auto leading-relaxed">
           I'm always interested in new opportunities and exciting projects. Whether you need a
           backend system, AI solution, or technical consultation, let's discuss how I can help.
         </p>
@@ -17,7 +17,7 @@ export default function ContactPage() {
       <section className="grid gap-12 lg:grid-cols-2">
         {/* Contact Form */}
         <div className="glass-effect rounded-3xl p-8 md:p-12">
-          <h2 className="font-display text-3xl font-bold mb-8 text-white">Send a Message</h2>
+          <h2 className="font-display text-3xl font-bold mb-8 text-white  ">Send a Message</h2>
           <form className="space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               <div>
@@ -81,7 +81,9 @@ export default function ContactPage() {
         {/* Contact Information */}
         <div className="space-y-8">
           <div className="glass-effect rounded-3xl p-8">
-            <h2 className="font-display text-3xl font-bold mb-8 text-white">Contact Information</h2>
+            <h2 className="font-display text-3xl font-bold mb-8 text-white  ">
+              Contact Information
+            </h2>
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-accent-600/20 rounded-full flex items-center justify-center">
@@ -148,7 +150,7 @@ export default function ContactPage() {
 
           {/* Quick Actions */}
           <div className="glass-effect rounded-3xl p-8">
-            <h3 className="font-display text-2xl font-bold mb-6 text-white">Quick Actions</h3>
+            <h3 className="font-display text-2xl font-bold mb-6 text-white  ">Quick Actions</h3>
             <div className="space-y-4">
               <a
                 href="mailto:dangnguyen28.work@gmail.com?subject=Project Inquiry"

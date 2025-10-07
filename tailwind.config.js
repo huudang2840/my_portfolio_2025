@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [ "./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}" ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -27,6 +28,30 @@ const config = {
           700: "#1d4ed8",
           800: "#1e40af",
           900: "#1e3a8a"
+        },
+        ocean: {
+          50: "#f0fdfa",
+          100: "#ccfbf1",
+          200: "#99f6e4",
+          300: "#5eead4",
+          400: "#2dd4bf",
+          500: "#14b8a6",
+          600: "#0d9488",
+          700: "#0f766e",
+          800: "#115e59",
+          900: "#134e4a"
+        },
+        sky: {
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a"
         }
       },
       fontFamily: {
@@ -35,8 +60,10 @@ const config = {
       },
       boxShadow: {
         'soft': "0 10px 40px rgba(2,6,23,.08)",
-        'glow': "0 0 20px rgba(14, 165, 233, 0.3)",
-        'glow-lg': "0 0 40px rgba(14, 165, 233, 0.4)"
+        'glow': "0 0 20px rgba(59, 130, 246, 0.4)",
+        'glow-lg': "0 0 40px rgba(59, 130, 246, 0.5)",
+        'glow-ocean': "0 0 20px rgba(20, 184, 166, 0.3)",
+        'glow-sky': "0 0 30px rgba(96, 165, 250, 0.3)"
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

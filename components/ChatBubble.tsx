@@ -26,7 +26,7 @@ export default function ChatBubble() {
         <div className="relative w-full h-full flex items-center justify-center">
           {/* Chat Icon */}
           <svg
-            className="w-8 h-8 text-white transition-transform group-hover:scale-110"
+            className="w-8 h-8 text-white   transition-transform group-hover:scale-110"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -41,7 +41,7 @@ export default function ChatBubble() {
 
           {/* Notification Dot */}
           <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
-            <span className="text-xs text-white font-bold">1</span>
+            <span className="text-xs text-white   font-bold">1</span>
           </div>
         </div>
       </button>
