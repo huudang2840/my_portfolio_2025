@@ -31,9 +31,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div className="mx-auto max-w-4xl h-16 px-4 md:px-6 flex items-center justify-center">
-        <nav className="flex items-center gap-8 text-sm font-medium">
+        <nav
+          className="flex items-center gap-10 text-sm font-large px-6 py-2 rounded-2xl"
+          id="header"
+        >
           <Link href="/projects" className="text-slate-300 hover:text-accent-400 transition-colors">
             Work
           </Link>
