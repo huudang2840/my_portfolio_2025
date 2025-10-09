@@ -7,6 +7,7 @@ import ChatBubble from "@/components/ChatBubble";
 import { ThemeProvider } from "@/lib/theme-context";
 import ThemeScript from "@/components/ThemeScript";
 import FloatingThemeToggle from "@/components/FloatingThemeToggle";
+import SmoothFollower from "@/components/SmoothFollower";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const unbounded = Unbounded({
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="body-surface min-h-dvh text-primary antialiased" suppressHydrationWarning>
         <ThemeProvider>
+          <SmoothFollower />
           <Header />
           <main className="mx-auto max-w-7xl px-4 md:px-6 py-8 md:py-16 mt-8 md:mt-10">
             {children}

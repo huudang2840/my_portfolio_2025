@@ -122,15 +122,19 @@
   }
 
   body {
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
     color: rgb(var(--text-primary));
   }
+
+  /* Keep default cursor visible alongside custom cursor */
 }
 
 @layer components {
   .body-surface {
-    background: var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3),
-      var(--bg-gradient-4);
+    background:
+      var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3), var(--bg-gradient-4);
     background-attachment: fixed;
   }
 
@@ -142,7 +146,9 @@
   }
 
   .light .glass-effect {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.08),
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
@@ -171,7 +177,9 @@
     background: rgba(var(--bg-card), 1);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(var(--border-primary), 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      0 8px 16px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
   }
@@ -189,7 +197,9 @@
 
   .light .cta-card {
     background: rgba(var(--bg-card), 1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.12),
+      0 8px 16px rgba(0, 0, 0, 0.08);
   }
 
   .light .cta-card::before {
@@ -200,7 +210,9 @@
     background: rgba(var(--bg-card), 1);
     backdrop-filter: blur(16px);
     border: 2px solid rgba(var(--border-primary), 0.4);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.15);
+    box-shadow:
+      0 25px 50px rgba(0, 0, 0, 0.2),
+      0 12px 24px rgba(0, 0, 0, 0.15);
     position: relative;
     overflow: hidden;
   }
@@ -231,7 +243,9 @@
 
   .light .hero-cta-card {
     background: rgba(var(--bg-card), 1);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 25px 50px rgba(0, 0, 0, 0.15),
+      0 12px 24px rgba(0, 0, 0, 0.1);
   }
 
   .light .hero-cta-card::before {
