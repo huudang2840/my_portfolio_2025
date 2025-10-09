@@ -46,28 +46,28 @@ export default function Header() {
         >
           <Link
             href="/projects"
-            className="text-slate-300   hover:text-accent-300   transition-colors text-xs sm:text-sm"
+            className="text-secondary hover:text-accent-300 transition-colors text-xs sm:text-sm"
           >
             Work
           </Link>
           <Link
             href="/about"
-            className="text-slate-300   hover:text-accent-300   transition-colors text-xs sm:text-sm"
+            className="text-secondary hover:text-accent-300 transition-colors text-xs sm:text-sm"
           >
             About
           </Link>
-          <Link href="/" className="font-display text-lg sm:text-xl font-bold text-white  ">
+          <Link href="/" className="font-display text-lg sm:text-xl font-bold text-primary">
             DN
           </Link>
           <Link
             href="/blogs"
-            className="text-slate-300   hover:text-accent-300   transition-colors text-xs sm:text-sm"
+            className="text-secondary hover:text-accent-300 transition-colors text-xs sm:text-sm"
           >
             Blogs
           </Link>
           <Link
             href="/contact"
-            className="text-slate-300   hover:text-accent-300   transition-colors text-xs sm:text-sm"
+            className="text-secondary hover:text-accent-300 transition-colors text-xs sm:text-sm"
           >
             Contact
           </Link>

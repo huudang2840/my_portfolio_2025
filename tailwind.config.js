@@ -5,6 +5,17 @@ const config = {
   theme: {
     extend: {
       colors: {
+        // Theme-aware colors using CSS variables
+        'bg-primary': 'rgb(var(--bg-primary) / <alpha-value>)',
+        'bg-secondary': 'rgb(var(--bg-secondary) / <alpha-value>)',
+        'bg-tertiary': 'rgb(var(--bg-tertiary) / <alpha-value>)',
+        'text-primary': 'rgb(var(--text-primary) / <alpha-value>)',
+        'text-secondary': 'rgb(var(--text-secondary) / <alpha-value>)',
+        'text-tertiary': 'rgb(var(--text-tertiary) / <alpha-value>)',
+        'text-muted': 'rgb(var(--text-muted) / <alpha-value>)',
+        'border-primary': 'rgb(var(--border-primary) / <alpha-value>)',
+
+        // Keep existing color palettes for specific uses
         brand: {
           50: "#f8fafc",
           100: "#f1f5f9",

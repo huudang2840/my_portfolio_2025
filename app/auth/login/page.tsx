@@ -70,7 +70,7 @@ export default function LoginPage() {
           <p className="mt-2 text-sm text-slate-400">Access your blog admin dashboard</p>
         </div>
 
-        <div className="glass-effect rounded-3xl p-8">
+        <div className="cta-card rounded-3xl p-8">
           <form className="space-y-6" onSubmit={handleLogin}>
             {error && (
               <div className="bg-red-600/20 border border-red-600/50 text-red-400 px-4 py-3 rounded-lg text-sm">
@@ -90,7 +90,7 @@ export default function LoginPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-slate-800/50 border border-primary/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
                 placeholder="Enter your email"
               />
             </div>
@@ -107,7 +107,7 @@ export default function LoginPage() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-slate-800/50 border border-primary/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
                 placeholder="Enter your password"
               />
             </div>
@@ -124,7 +124,7 @@ export default function LoginPage() {
 
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-slate-600" />
+                <div className="w-full border-t border-primary/20" />
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="px-2 bg-slate-800 text-slate-400">Or continue with</span>

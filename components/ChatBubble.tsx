@@ -20,7 +20,7 @@ export default function ChatBubble() {
       {/* Floating Chat Bubble */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-accent-600 rounded-full shadow-lg hover:bg-accent-700 transition-all duration-300 hover-lift group"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-accent-600 rounded-full shadow-lg hover:bg-accent-700 transition-all duration-300 hover-lift group"
         aria-label="Open chat"
       >
         <div className="relative w-full h-full flex items-center justify-center">

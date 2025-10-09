@@ -5,40 +5,48 @@ export default function AboutPage() {
   const skills = [
     {
       category: "Backend",
-      items: ["Python (Flask/FastAPI)", "Odoo 17", "PostgreSQL", "Redis", "Docker"],
-    },
-    {
-      category: "AI & ML",
-      items: ["Azure OpenAI", "Supabase", "FAISS/BM25", "RAG Systems", "OCR Processing"],
+      items: ["PHP (Magento 2)", "Python", "Node.js", "AL (Dynamics 365 BC)", "API Design"],
     },
     {
       category: "Frontend",
-      items: ["React/Next.js", "Tailwind CSS", "TypeScript", "Responsive Design"],
+      items: ["Vue/Nuxt", "React/Next.js", "TypeScript", "UI/UX & Responsive"],
     },
     {
-      category: "Tools",
-      items: ["Git", "Linux", "API Design", "Performance Optimization", "System Architecture"],
+      category: "Data & Infra",
+      items: ["MySQL", "SQL Server", "Postgres", "MongoDB", "Docker", "Linux"],
+    },
+    {
+      category: "AI & Automation",
+      items: ["Azure OpenAI", "Supabase (pgvector)", "RAG Systems", "Tesseract OCR", "n8n"],
+    },
+    {
+      category: "Power Platform",
+      items: ["Power Apps", "Power Automate", "Microsoft Teams/Outlook"],
+    },
+    {
+      category: "Collab & Delivery",
+      items: ["Git/Sourcetree", "Release Planning", "System Deployment", "Problem Solving"],
     },
   ];
 
   const timeline = [
     {
-      year: "2025",
-      title: "Promotions Engine v2",
-      desc: "Refactored rule engine for better performance and flexibility. Implemented advanced caching strategies and optimized database queries.",
-      icon: "🚀",
-    },
-    {
-      year: "2024",
-      title: "RAG Chatbot System",
-      desc: "Built intelligent chatbot using Azure OpenAI, Supabase, and Vietnamese OCR. Achieved 82% top-1 answer accuracy.",
-      icon: "🤖",
+      year: "2023 — 2025",
+      title: "Software Developer - LIEN A",
+      desc: "Full-stack development across retail systems and internal tools. Key areas: POS (Magento 2), integrations, automation, and reliability.",
+      icon: "💼",
     },
     {
       year: "2023",
-      title: "Factory In/Out Portal",
-      desc: "Developed QR-based check-in/out system with photo verification and multi-step approval workflow. Reduced check-in time by 60%.",
-      icon: "📱",
+      title: "Frontend Intern - Keppel Land Vietnam",
+      desc: "Implemented UI, responsive layouts, and basic data visualization. Collaborated with senior engineers on code quality and delivery.",
+      icon: "🌱",
+    },
+    {
+      year: "2019–2023",
+      title: "Ton Duc Thang University",
+      desc: "BSc in Information Technology (2023). Scholarships: 2020–2021, 2021–2022. GPA: 8.16/10. Award: Second Prize — E-card Design.",
+      icon: "🎓",
     },
   ];
 
@@ -46,37 +54,36 @@ export default function AboutPage() {
     <div className="space-y-20">
       {/* Hero Section */}
       <header className="text-center space-y-8 animate-fade-in">
-        <h1 className="font-display text-5xl md:text-6xl font-bold text-white  ">About Me</h1>
-        <p className="text-xl text-slate-400   max-w-4xl mx-auto leading-relaxed">
-          I'm a passionate software engineer focused on building scalable backend systems and
-          AI-powered solutions. My approach is simple: clean architecture, measurable results, and
-          maintainable code.
+        <h1 className="font-display text-5xl md:text-6xl font-bold text-primary">About Me</h1>
+        <p className="text-xl text-tertiary max-w-4xl mx-auto leading-relaxed">
+          Full-stack developer with 2 years of hands-on experience in retail and enterprise apps. I
+          focus on <strong>POS with Magento&nbsp;2</strong>, <strong>AI-powered RAG</strong>, and
+          <strong> workflow automation</strong>. My approach: clean architecture, measurable impact,
+          and maintainable code.
         </p>
       </header>
 
       {/* Skills Section */}
       <section className="space-y-12">
         <div className="text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white  ">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">
             Skills & Technologies
           </h2>
-          <p className="text-slate-400   text-lg">
-            Technologies I work with to bring ideas to life
-          </p>
+          <p className="text-tertiary text-lg">What I use to ship reliable systems</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {skills.map((skill, index) => (
             <div
               key={skill.category}
-              className="glass-effect rounded-3xl p-6 hover-lift animate-slide-up"
+              className="cta-card rounded-3xl p-6 hover-lift animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="font-bold text-lg mb-4 text-accent-300  ">{skill.category}</h3>
+              <h3 className="font-bold text-lg mb-4 text-accent-300">{skill.category}</h3>
               <ul className="space-y-2">
                 {skill.items.map((item) => (
-                  <li key={item} className="text-slate-300   text-sm flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-accent-400   rounded-full"></div>
+                  <li key={item} className="text-secondary text-sm flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-accent-400 rounded-full"></div>
                     {item}
                   </li>
                 ))}
@@ -89,12 +96,10 @@ export default function AboutPage() {
       {/* Timeline Section */}
       <section className="space-y-12">
         <div className="text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white  ">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">
             My Journey
           </h2>
-          <p className="text-slate-400   text-lg">
-            Key milestones and projects that shaped my career
-          </p>
+          <p className="text-tertiary text-lg">Milestones that shaped my work</p>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -108,15 +113,15 @@ export default function AboutPage() {
                   className="relative flex items-start gap-6 animate-slide-up"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className="flex-shrink-0 w-16 h-16 glass-effect rounded-full flex items-center justify-center text-2xl">
+                  <div className="flex-shrink-0 w-16 h-16 cta-card rounded-full flex items-center justify-center text-2xl">
                     {item.icon}
                   </div>
-                  <div className="flex-1 glass-effect rounded-3xl p-6 hover-lift">
-                    <div className="flex items-center gap-4 mb-3">
-                      <span className="text-accent-300   font-bold text-lg">{item.year}</span>
-                      <h3 className="font-bold text-xl text-white  ">{item.title}</h3>
+                  <div className="flex-1 cta-card rounded-3xl p-6 hover-lift">
+                    <div className="flex flex-col gap-2 mb-3">
+                      <span className="text-accent-300 font-bold text-lg">{item.year}</span>
+                      <h3 className="font-bold text-xl text-primary">{item.title}</h3>
                     </div>
-                    <p className="text-slate-300   leading-relaxed">{item.desc}</p>
+                    <p className="text-secondary leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -127,15 +132,15 @@ export default function AboutPage() {
 
       {/* Philosophy Section */}
       <section className="text-center">
-        <div className="glass-effect rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-white  ">
+        <div className="cta-card rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-primary">
             My Philosophy
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div className="space-y-3">
               <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-ocean-500 rounded-full flex items-center justify-center mx-auto">
                 <svg
-                  className="w-6 h-6 text-white  "
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -148,15 +153,13 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-bold text-lg text-white  ">Simple</h3>
-              <p className="text-slate-400   text-sm">
-                Clean, readable code that anyone can understand and maintain
-              </p>
+              <h3 className="font-bold text-lg text-primary">Simple</h3>
+              <p className="text-tertiary text-sm">Readable, straightforward code</p>
             </div>
             <div className="space-y-3">
               <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-ocean-500 rounded-full flex items-center justify-center mx-auto">
                 <svg
-                  className="w-6 h-6 text-white  "
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -175,15 +178,13 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-bold text-lg text-white  ">Maintainable</h3>
-              <p className="text-slate-400   text-sm">
-                Code that's easy to extend, debug, and improve over time
-              </p>
+              <h3 className="font-bold text-lg text-primary">Maintainable</h3>
+              <p className="text-tertiary text-sm">Easy to extend, test, and debug</p>
             </div>
             <div className="space-y-3">
               <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-ocean-500 rounded-full flex items-center justify-center mx-auto">
                 <svg
-                  className="w-6 h-6 text-white  "
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -196,10 +197,8 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-bold text-lg text-white  ">Measurable</h3>
-              <p className="text-slate-400   text-sm">
-                Results-driven development with clear metrics and performance indicators
-              </p>
+              <h3 className="font-bold text-lg text-primary">Measurable</h3>
+              <p className="text-tertiary text-sm">Clear KPIs and performance metrics.</p>
             </div>
           </div>
         </div>

@@ -10,25 +10,27 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "LA Retail API — Promotions Engine",
+    title: "L’A POS (Headless Magento 2)",
     summary:
-      "Rule khuyến mãi phức hợp (item_no/size/variant_code), tính số lần áp dụng & gom matched_lines.",
-    stack: ["Python", "Odoo 17", "PostgreSQL", "Redis"],
-    result: "-28% thời gian xử lý, +1.6x tốc độ apply",
-    image: "/projects/promo.jpg",
+      "Headless retail POS: Magento 2 + Nuxt, ACB QR payment, multi-channel product/order sync.",
+    stack: ["Magento 2", "Nuxt.js", "MySQL", "ACB QR Pay", "Dynamics 365 (AL)"],
+    result: "Saved ~USD 20k/year in licenses; ~30% faster checkout",
+    image: "/projects/pos_la.jpg",
   },
   {
-    title: "RAG Chatbot for Liên Á",
-    summary: "n8n + Supabase + Azure OpenAI, OCR tiếng Việt (Tesseract), hybrid BM25 + FAISS.",
-    stack: ["Python", "Flask", "Supabase", "Azure OpenAI", "Docker"],
-    result: "Top-1 answer rate ~82%",
+    title: "RAG Chatbot – Internal Knowledge",
+    summary:
+      "Crawl4AI + Tesseract OCR (VI) → Supabase (pgvector) → Azure OpenAI; n8n orchestration.",
+    stack: ["Python", "Flask", "n8n", "Supabase", "Azure OpenAI", "Docker"],
+    result: "Top-1 answer rate ~82%; lower manual search time",
     image: "/projects/rag.jpg",
   },
   {
-    title: "Factory In/Out Portal",
-    summary: "QR check-in/out, html5-qrcode, ảnh minh chứng, phê duyệt đa bước; Lighthouse 98.",
-    stack: ["Odoo", "JS", "Bootstrap"],
-    result: "Giảm 60% thời gian check-in",
-    image: "/projects/scan.jpg",
+    title: "Power Apps – Replacement Proposal Workflow",
+    summary:
+      "Power Apps form + Power Automate; auto-routed approvals via Teams/Email with SLA tracking.",
+    stack: ["Power Apps", "Power Automate", "SharePoint/Dataverse", "Microsoft Teams"],
+    result: "~50% faster processing; status transparency for stakeholders",
+    image: "/projects/powerapps.jpg",
   },
 ];

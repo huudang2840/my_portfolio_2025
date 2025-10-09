@@ -82,7 +82,7 @@ export default function ImageUpload({ onUpload, currentImage, className = "" }: 
             <img
               src={preview}
               alt="Preview"
-              className="w-full h-48 object-cover rounded-lg border border-slate-600"
+              className="w-full h-48 object-cover rounded-lg border border-primary/20"
             />
             <button
               type="button"

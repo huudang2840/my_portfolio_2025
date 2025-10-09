@@ -1,60 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTheme } from "@/lib/theme-context";
 
-export default function SafeThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
-
-  useEffect(() => {
-    setMounted(true);
-
-    // Load theme from localStorage
-    try {
-      const savedTheme = localStorage.getItem("theme") as "light" | "dark";
-      if (savedTheme === "light" || savedTheme === "dark") {
-        setTheme(savedTheme);
-      } else {
-        // Check system preference
-        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
-        setTheme(systemTheme);
-      }
-    } catch {
-      setTheme("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-
-    // Apply to document
-    document.documentElement.classList.remove("light", "dark");
-    document.documentElement.classList.add(newTheme);
-
-    // Save to localStorage
-    try {
-      localStorage.setItem("theme", newTheme);
-    } catch {
-      // localStorage not available
-    }
-  };
-
-  // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
-    return (
-      <div className="relative p-2 rounded-full glass-effect">
-        <div className="w-5 h-5" />
-      </div>
-    );
-  }
+function ThemeToggleButton() {
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <button
       onClick={toggleTheme}
-      className="relative p-2 rounded-full glass-effect hover:bg-slate-700/50 transition-all duration-300 group"
+      className="relative p-2 rounded-full cta-card hover:bg-slate-700/50 transition-all duration-300 group"
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
       <div className="relative w-5 h-5">
@@ -93,4 +48,23 @@ export default function SafeThemeToggle() {
       />
     </button>
   );
+}
+
+export default function SafeThemeToggle() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return (
+      <div className="relative p-2 rounded-full cta-card">
+        <div className="w-5 h-5" />
+      </div>
+    );
+  }
+
+  return <ThemeToggleButton />;
 }

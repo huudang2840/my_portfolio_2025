@@ -225,23 +225,23 @@ export default function AdminPage() {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="glass-effect rounded-2xl p-6">
+          <div className="cta-card rounded-2xl p-6">
             <h3 className="text-2xl font-bold text-white">{posts.length}</h3>
             <p className="text-slate-400">Total Posts</p>
           </div>
-          <div className="glass-effect rounded-2xl p-6">
+          <div className="cta-card rounded-2xl p-6">
             <h3 className="text-2xl font-bold text-white">
               {posts.filter((p) => p.published).length}
             </h3>
             <p className="text-slate-400">Published</p>
           </div>
-          <div className="glass-effect rounded-2xl p-6">
+          <div className="cta-card rounded-2xl p-6">
             <h3 className="text-2xl font-bold text-white">
               {posts.filter((p) => p.featured).length}
             </h3>
             <p className="text-slate-400">Featured</p>
           </div>
-          <div className="glass-effect rounded-2xl p-6">
+          <div className="cta-card rounded-2xl p-6">
             <h3 className="text-2xl font-bold text-white">
               {Math.round(posts.reduce((acc, post) => acc + post.read_time, 0) / posts.length)} min
             </h3>
@@ -250,7 +250,7 @@ export default function AdminPage() {
         </div>
 
         {/* Posts Table */}
-        <div className="glass-effect rounded-2xl overflow-hidden">
+        <div className="cta-card rounded-2xl overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-slate-800">
@@ -264,7 +264,7 @@ export default function AdminPage() {
               </thead>
               <tbody>
                 {posts.map((post) => (
-                  <tr key={post.id} className="border-t border-slate-700 hover:bg-slate-800/50">
+                  <tr key={post.id} className="border-t border-primary/10 hover:bg-slate-800/50">
                     <td className="p-4">
                       <div>
                         <h4 className="font-medium text-white">{post.title}</h4>
@@ -391,7 +391,7 @@ function PostForm({ post, isEditing, onSave, onCancel }: PostFormProps) {
                 type="text"
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-full px-4 py-3 bg-slate-700 border border-primary/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                 required
               />
             </div>
@@ -400,7 +400,7 @@ function PostForm({ post, isEditing, onSave, onCancel }: PostFormProps) {
               <select
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-full px-4 py-3 bg-slate-700 border border-primary/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                 required
               >
                 <option value="">Select category</option>
@@ -419,7 +419,7 @@ function PostForm({ post, isEditing, onSave, onCancel }: PostFormProps) {
               value={formData.excerpt}
               onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
               rows={3}
-              className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+              className="w-full px-4 py-3 bg-slate-700 border border-primary/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
               required
             />
           </div>
@@ -439,7 +439,7 @@ function PostForm({ post, isEditing, onSave, onCancel }: PostFormProps) {
                 type="text"
                 value={formData.tags}
                 onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-full px-4 py-3 bg-slate-700 border border-primary/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                 placeholder="Python, Backend, AI"
               />
             </div>
@@ -451,7 +451,7 @@ function PostForm({ post, isEditing, onSave, onCancel }: PostFormProps) {
                 type="number"
                 value={formData.read_time}
                 onChange={(e) => setFormData({ ...formData, read_time: parseInt(e.target.value) })}
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                className="w-full px-4 py-3 bg-slate-700 border border-primary/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                 min="1"
               />
             </div>
@@ -468,7 +468,7 @@ function PostForm({ post, isEditing, onSave, onCancel }: PostFormProps) {
                 type="checkbox"
                 checked={formData.featured}
                 onChange={(e) => setFormData({ ...formData, featured: e.target.checked })}
-                className="w-4 h-4 text-accent-600 bg-slate-700 border-slate-600 rounded focus:ring-accent-500"
+                className="w-4 h-4 text-accent-600 bg-slate-700 border-primary/20 rounded focus:ring-accent-500"
               />
               <span className="text-slate-300">Featured</span>
             </label>
@@ -477,7 +477,7 @@ function PostForm({ post, isEditing, onSave, onCancel }: PostFormProps) {
                 type="checkbox"
                 checked={formData.published}
                 onChange={(e) => setFormData({ ...formData, published: e.target.checked })}
-                className="w-4 h-4 text-accent-600 bg-slate-700 border-slate-600 rounded focus:ring-accent-500"
+                className="w-4 h-4 text-accent-600 bg-slate-700 border-primary/20 rounded focus:ring-accent-500"
               />
               <span className="text-slate-300">Published</span>
             </label>

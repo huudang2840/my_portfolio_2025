@@ -131,7 +131,7 @@ export default function MarkdownEditor({
       </div>
 
       {/* Toolbar */}
-      <div className="flex flex-wrap gap-2 p-3 bg-slate-800/50 rounded-lg border border-slate-600">
+      <div className="flex flex-wrap gap-2 p-3 bg-slate-800/50 rounded-lg border border-primary/20">
         {toolbarButtons.map((button, index) => (
           <button
             key={index}
@@ -153,7 +153,7 @@ export default function MarkdownEditor({
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         rows={15}
-        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 font-mono text-sm resize-none"
+        className="w-full px-4 py-3 bg-slate-700 border border-primary/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 font-mono text-sm resize-none"
       />
 
       {/* Hidden file input */}
@@ -169,7 +169,7 @@ export default function MarkdownEditor({
       {value && (
         <div className="space-y-2">
           <label className="block text-sm font-medium text-slate-300">Preview</label>
-          <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-600 max-h-64 overflow-y-auto">
+          <div className="p-4 bg-slate-800/50 rounded-lg border border-primary/20 max-h-64 overflow-y-auto">
             <div
               className="prose prose-invert prose-sm max-w-none"
               dangerouslySetInnerHTML={{
@@ -190,7 +190,7 @@ export default function MarkdownEditor({
                   )
                   .replace(
                     /!\[(.+?)\]\((.+?)\)/g,
-                    '<div class="flex justify-center my-4"><img src="$2" alt="$1" class="max-w-lg w-full h-auto rounded border border-slate-600" onerror="this.style.display=\'none\'" /></div>'
+                    '<div class="flex justify-center my-4"><img src="$2" alt="$1" class="max-w-lg w-full h-auto rounded border border-primary/20" onerror="this.style.display=\'none\'" /></div>'
                   )
                   .replace(
                     /\[(.+?)\]\((.+?)\)/g,

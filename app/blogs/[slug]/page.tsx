@@ -35,7 +35,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <article className="max-w-4xl mx-auto space-y-12">
       {/* Header */}
       <header className="space-y-8">
-        <div className="flex items-center gap-4 text-sm text-slate-400">
+        <div className="flex items-center gap-4 text-sm text-tertiary">
           <Link
             href="/blogs"
             className="hover:text-accent-400 transition-colors flex items-center gap-1"
@@ -51,25 +51,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             Back to Blog
           </Link>
           <span>•</span>
-          <span className="bg-slate-700 px-2 py-1 rounded text-xs">{post.category}</span>
+          <span className="bg-tertiary px-2 py-1 rounded text-xs">{post.category}</span>
           <span>{formatDate(post.published_at)}</span>
           <span>{post.read_time} min read</span>
         </div>
 
         <div className="space-y-6">
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
             {post.title}
           </h1>
 
-          <p className="text-xl text-slate-300 leading-relaxed">{post.excerpt}</p>
+          <p className="text-xl text-secondary leading-relaxed">{post.excerpt}</p>
 
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-accent-600/20 rounded-full flex items-center justify-center">
               <span className="text-accent-400 text-lg font-bold">{post.author.charAt(0)}</span>
             </div>
             <div>
-              <p className="text-white font-medium">{post.author}</p>
-              <p className="text-slate-400 text-sm">Published on {formatDate(post.published_at)}</p>
+              <p className="text-primary font-medium">{post.author}</p>
+              <p className="text-tertiary text-sm">Published on {formatDate(post.published_at)}</p>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Content */}
       <div className="prose prose-lg prose-invert max-w-none">
         <div
-          className="text-slate-300 leading-relaxed space-y-6"
+          className="text-secondary leading-relaxed space-y-6"
           dangerouslySetInnerHTML={{
             __html: post.content
               .replace(/\n\n/g, "</p><p>")
@@ -93,13 +93,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               .replace(/$/, "</p>")
               .replace(/#{1,6}\s+(.+)/g, (match, title) => {
                 const level = match.match(/^#+/)?.[0]?.length ?? 1;
-                return `<h${level} class="font-display font-bold text-white mt-8 mb-4">${title}</h${level}>`;
+                return `<h${level} class="font-display font-bold text-primary mt-8 mb-4">${title}</h${level}>`;
               })
-              .replace(/\*\*(.+?)\*\*/g, '<strong class="text-white">$1</strong>')
-              .replace(/\*(.+?)\*/g, '<em class="text-slate-200">$1</em>')
+              .replace(/\*\*(.+?)\*\*/g, '<strong class="text-primary">$1</strong>')
+              .replace(/\*(.+?)\*/g, '<em class="text-secondary">$1</em>')
               .replace(
                 /`(.+?)`/g,
-                '<code class="bg-slate-800 px-2 py-1 rounded text-accent-400">$1</code>'
+                '<code class="bg-tertiary px-2 py-1 rounded text-accent-400">$1</code>'
               )
               .replace(
                 /!\[(.+?)\]\((.+?)\)/g,
@@ -109,14 +109,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 /\[(.+?)\]\((.+?)\)/g,
                 '<a href="$2" class="text-accent-400 hover:text-accent-300 underline" target="_blank" rel="noopener noreferrer">$1</a>'
               )
-              .replace(/^- (.+)/gm, '<li class="text-slate-300 ml-4">$1</li>')
+              .replace(/^- (.+)/gm, '<li class="text-secondary ml-4">$1</li>')
               .replace(
                 /(<li.*?<\/li>[\r\n]*)+/g,
                 '<ul class="list-disc list-inside space-y-2 my-4">$&</ul>'
               )
               .replace(
                 /^> (.+)/gm,
-                '<blockquote class="border-l-4 border-accent-600 pl-6 italic text-slate-200 my-6 bg-slate-800/50 py-4 rounded-r-lg">$1</blockquote>'
+                '<blockquote class="border-l-4 border-accent-600 pl-6 italic text-secondary my-6 bg-tertiary/50 py-4 rounded-r-lg">$1</blockquote>'
               ),
           }}
         />
@@ -127,7 +127,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {post.tags.map((tag) => (
           <span
             key={tag}
-            className="bg-slate-700/50 text-slate-300 px-3 py-1 rounded-full text-sm hover:bg-slate-600/50 transition-colors cursor-pointer"
+            className="bg-tertiary/50 text-secondary px-3 py-1 rounded-full text-sm hover:bg-tertiary transition-colors cursor-pointer"
           >
             #{tag}
           </span>
@@ -135,8 +135,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </div>
 
       {/* Share Section */}
-      <div className="glass-effect rounded-3xl p-8">
-        <h3 className="font-display text-2xl font-bold mb-6 text-white">Share this article</h3>
+      <div className="cta-card rounded-3xl p-8">
+        <h3 className="font-display text-2xl font-bold mb-6 text-primary">Share this article</h3>
         <div className="flex gap-4">
           <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -166,24 +166,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Related Posts */}
       <div className="space-y-8">
-        <h3 className="font-display text-2xl font-bold text-white">Related Articles</h3>
+        <h3 className="font-display text-2xl font-bold text-primary">Related Articles</h3>
         <div className="grid gap-6 md:grid-cols-2">
           {(await getBlogPosts(post.category))
             .filter((p) => p.id !== post.id)
             .slice(0, 2)
             .map((relatedPost) => (
-              <div key={relatedPost.id} className="glass-effect rounded-2xl p-6 hover-lift">
+              <div key={relatedPost.id} className="cta-card rounded-2xl p-6 hover-lift">
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-sm text-slate-400">
-                    <span className="bg-slate-700 px-2 py-1 rounded text-xs">
+                  <div className="flex items-center gap-2 text-sm text-tertiary">
+                    <span className="bg-tertiary px-2 py-1 rounded text-xs">
                       {relatedPost.category}
                     </span>
                     <span>{relatedPost.read_time} min read</span>
                   </div>
-                  <h4 className="font-display text-lg font-bold text-white hover:text-accent-400 transition-colors">
+                  <h4 className="font-display text-lg font-bold text-primary hover:text-accent-400 transition-colors">
                     <Link href={`/blogs/${relatedPost.slug}`}>{relatedPost.title}</Link>
                   </h4>
-                  <p className="text-slate-300 text-sm line-clamp-2">{relatedPost.excerpt}</p>
+                  <p className="text-secondary text-sm line-clamp-2">{relatedPost.excerpt}</p>
                 </div>
               </div>
             ))}

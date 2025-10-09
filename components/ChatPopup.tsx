@@ -90,17 +90,14 @@ export default function ChatPopup({ isOpen, onClose }: ChatPopupProps) {
         <div className="bg-accent-600 px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-              <span className="text-white   font-bold text-lg">D</span>
+              <span className="text-white font-bold text-lg">D</span>
             </div>
             <div>
-              <h3 className="text-white   font-semibold">Dang Bot</h3>
+              <h3 className="text-white font-semibold">Dang Bot</h3>
               <p className="text-accent-100 text-sm">Ask me a question</p>
             </div>
           </div>
-          <button
-            onClick={onClose}
-            className="text-white   hover:text-accent-200  transition-colors"
-          >
+          <button onClick={onClose} className="text-white hover:text-accent-200 transition-colors">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
@@ -121,7 +118,7 @@ export default function ChatPopup({ isOpen, onClose }: ChatPopupProps) {
             >
               <div
                 className={`max-w-[80%] px-4 py-2 rounded-2xl ${
-                  message.isBot ? "bg-gray-200 text-gray-800" : "bg-accent-600 text-white  "
+                  message.isBot ? "bg-gray-200 text-gray-800" : "bg-accent-600 text-white"
                 }`}
               >
                 <p className="text-sm">{message.text}</p>
@@ -160,7 +157,7 @@ export default function ChatPopup({ isOpen, onClose }: ChatPopupProps) {
             <button
               type="submit"
               disabled={!inputValue.trim()}
-              className="px-4 py-2 bg-accent-600 text-white   rounded-full hover:bg-accent-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 bg-accent-600 text-white rounded-full hover:bg-accent-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path

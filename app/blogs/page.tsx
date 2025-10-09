@@ -14,8 +14,8 @@ export default async function BlogsPage() {
     <div className="space-y-20">
       {/* Hero Section */}
       <header className="text-center space-y-8 animate-fade-in">
-        <h1 className="font-display text-5xl md:text-6xl font-bold text-white  ">Blog</h1>
-        <p className="text-xl text-slate-400   max-w-3xl mx-auto leading-relaxed">
+        <h1 className="font-display text-5xl md:text-6xl font-bold text-primary">Blog</h1>
+        <p className="text-xl text-tertiary max-w-3xl mx-auto leading-relaxed">
           Sharing thoughts, insights, and knowledge about software development, AI, and the
           ever-evolving world of technology.
         </p>
@@ -25,10 +25,10 @@ export default async function BlogsPage() {
       {featuredPosts.length > 0 && (
         <section className="space-y-12">
           <div className="text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white  ">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">
               Featured Posts
             </h2>
-            <p className="text-slate-400   text-lg">My most popular and insightful articles</p>
+            <p className="text-tertiary text-lg">My most popular and insightful articles</p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-2">
@@ -43,10 +43,10 @@ export default async function BlogsPage() {
       <section className="space-y-12">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white  ">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">
               All Posts
             </h2>
-            <p className="text-slate-400   text-lg">
+            <p className="text-tertiary text-lg">
               {allPosts.length} articles about technology and development
             </p>
           </div>
@@ -62,15 +62,15 @@ export default async function BlogsPage() {
       {/* Categories & Tags */}
       <section className="space-y-12">
         <div className="text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white  ">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">
             Explore by Topic
           </h2>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
           {/* Categories */}
-          <div className="glass-effect rounded-3xl p-8">
-            <h3 className="font-display text-2xl font-bold mb-6 text-white  ">Categories</h3>
+          <div className="cta-card rounded-3xl p-8">
+            <h3 className="font-display text-2xl font-bold mb-6 text-primary">Categories</h3>
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
                 <span
@@ -84,13 +84,13 @@ export default async function BlogsPage() {
           </div>
 
           {/* Tags */}
-          <div className="glass-effect rounded-3xl p-8">
-            <h3 className="font-display text-2xl font-bold mb-6 text-white  ">Popular Tags</h3>
+          <div className="cta-card rounded-3xl p-8">
+            <h3 className="font-display text-2xl font-bold mb-6 text-primary">Popular Tags</h3>
             <div className="flex flex-wrap gap-2">
               {tags.slice(0, 12).map((tag) => (
                 <span
                   key={tag}
-                  className="bg-slate-700/50 text-slate-300 px-3 py-1 rounded-full text-sm hover:bg-slate-600/50 transition-colors cursor-pointer"
+                  className="bg-tertiary/50 text-secondary px-3 py-1 rounded-full text-sm hover:bg-tertiary transition-colors cursor-pointer"
                 >
                   #{tag}
                 </span>
@@ -102,18 +102,18 @@ export default async function BlogsPage() {
 
       {/* Newsletter Signup */}
       <section className="text-center">
-        <div className="glass-effect rounded-3xl p-8 md:p-12 max-w-2xl mx-auto">
-          <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white  ">
+        <div className="cta-card rounded-3xl p-8 md:p-12 max-w-2xl mx-auto">
+          <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">
             Stay Updated
           </h3>
-          <p className="text-slate-300   text-lg mb-6">
+          <p className="text-secondary text-lg mb-6">
             Get notified when I publish new articles about development, AI, and technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
+              className="flex-1 px-4 py-3 bg-secondary/50 border border-primary/20 rounded-lg text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
             />
             <button className="bg-accent-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-accent-700 transition-all duration-300">
               Subscribe

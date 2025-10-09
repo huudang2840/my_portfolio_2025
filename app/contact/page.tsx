@@ -6,66 +6,67 @@ export default function ContactPage() {
     <div className="space-y-20">
       {/* Hero Section */}
       <header className="text-center space-y-8 animate-fade-in">
-        <h1 className="font-display text-5xl md:text-6xl font-bold text-white  ">Get in Touch</h1>
-        <p className="text-xl text-slate-400   max-w-3xl mx-auto leading-relaxed">
+        <h1 className="font-display text-5xl md:text-6xl font-bold text-primary">Get in Touch</h1>
+        <p className="text-xl text-tertiary max-w-3xl mx-auto leading-relaxed">
           I'm always interested in new opportunities and exciting projects. Whether you need a
-          backend system, AI solution, or technical consultation, let's discuss how I can help.
+          frontend, backend system, AI solution, or technical consultation, let's discuss how I can
+          help.
         </p>
       </header>
 
       {/* Contact Methods */}
       <section className="grid gap-12 lg:grid-cols-2">
         {/* Contact Form */}
-        <div className="glass-effect rounded-3xl p-8 md:p-12">
-          <h2 className="font-display text-3xl font-bold mb-8 text-white  ">Send a Message</h2>
+        <div className="cta-card rounded-3xl p-8 md:p-12">
+          <h2 className="font-display text-3xl font-bold mb-8 text-primary">Send a Message</h2>
           <form className="space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-secondary mb-2">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-secondary/50 border border-primary/20 rounded-lg placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent text-black"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-secondary mb-2">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-secondary/50 border border-primary/20 rounded-lg text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent text-black"
                   placeholder="your@email.com"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="subject" className="block text-sm font-medium text-secondary mb-2">
                 Subject
               </label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-secondary/50 border border-tertiary rounded-lg text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent text-black"
                 placeholder="What's this about?"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-secondary mb-2">
                 Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={6}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent resize-none"
+                className="w-full px-4 py-3 bg-secondary/50 border border-tertiary rounded-lg text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent resize-none text-black"
                 placeholder="Tell me about your project..."
               ></textarea>
             </div>
@@ -80,8 +81,8 @@ export default function ContactPage() {
 
         {/* Contact Information */}
         <div className="space-y-8">
-          <div className="glass-effect rounded-3xl p-8">
-            <h2 className="font-display text-3xl font-bold mb-8 text-white  ">
+          <div className="cta-card rounded-3xl p-8">
+            <h2 className="font-display text-3xl font-bold mb-8 text-primary">
               Contact Information
             </h2>
             <div className="space-y-6">
@@ -102,9 +103,10 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-slate-300 font-medium">Email</p>
+                  <p className="text-secondary font-medium">Email</p>
                   <a
                     href="mailto:dangnguyen28.work@gmail.com"
+                    target="_blank"
                     className="text-accent-400 hover:text-accent-300 transition-colors"
                   >
                     dangnguyen28.work@gmail.com
@@ -119,12 +121,13 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-slate-300 font-medium">GitHub</p>
+                  <p className="text-secondary font-medium">GitHub</p>
                   <a
-                    href="https://github.com/yourname"
+                    href="https://github.com/huudang2840"
+                    target="_blank"
                     className="text-accent-400 hover:text-accent-300 transition-colors"
                   >
-                    github.com/yourname
+                    https://github.com/huudang2840
                   </a>
                 </div>
               </div>
@@ -136,12 +139,14 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-slate-300 font-medium">LinkedIn</p>
+                  <p className="text-secondary font-medium">LinkedIn</p>
                   <a
-                    href="https://www.linkedin.com/in/yourname"
+                    href="https://www.linkedin.com/in/%C4%91%C4%83ng-nguy%E1%BB%85n-7a4b04240/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-accent-400 hover:text-accent-300 transition-colors"
                   >
-                    linkedin.com/in/yourname
+                    linkedin.com/in/đăng-nguyễn-7a4b04240
                   </a>
                 </div>
               </div>
@@ -149,8 +154,8 @@ export default function ContactPage() {
           </div>
 
           {/* Quick Actions */}
-          <div className="glass-effect rounded-3xl p-8">
-            <h3 className="font-display text-2xl font-bold mb-6 text-white  ">Quick Actions</h3>
+          <div className="cta-card rounded-3xl p-8">
+            <h3 className="font-display text-2xl font-bold mb-6 text-primary">Quick Actions</h3>
             <div className="space-y-4">
               <a
                 href="mailto:dangnguyen28.work@gmail.com?subject=Project Inquiry"
@@ -158,15 +163,16 @@ export default function ContactPage() {
               >
                 Start a Project
               </a>
-              <a
+              {/* <a
                 href="https://cal.com/yourname/30min"
-                className="block w-full glass-effect border border-slate-600 text-white px-6 py-3 rounded-lg font-medium hover:border-accent-400 transition-all duration-300 text-center"
+                className="block w-full cta-card border border-primary/20 text-primary px-6 py-3 rounded-lg font-medium hover:border-accent-400 transition-all duration-300 text-center"
               >
                 Schedule a Call
-              </a>
+              </a> */}
               <a
-                href="/cv.pdf"
-                className="block w-full glass-effect border border-slate-600 text-white px-6 py-3 rounded-lg font-medium hover:border-accent-400 transition-all duration-300 text-center"
+                href="/cv/NguyenHuuDang_SoftwareDeveloper.pdf"
+                className="block w-full cta-card border border-primary/20 text-primary px-6 py-3 rounded-lg font-medium hover:border-accent-400 transition-all duration-300 text-center"
+                download
               >
                 Download CV
               </a>

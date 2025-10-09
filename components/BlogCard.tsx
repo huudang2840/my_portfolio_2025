@@ -18,7 +18,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
 
   return (
     <article
-      className={`group glass-effect rounded-3xl overflow-hidden hover-lift ${
+      className={`group cta-card rounded-3xl overflow-hidden hover-lift ${
         featured ? "md:col-span-2" : ""
       }`}
     >
@@ -32,7 +32,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
           />
           {post.featured && (
             <div className="absolute top-4 left-4">
-              <span className="bg-accent-600 text-white   px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-accent-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                 Featured
               </span>
             </div>
@@ -41,8 +41,8 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
       )}
 
       <div className="p-6 md:p-8 space-y-4">
-        <div className="flex items-center gap-4 text-sm text-slate-400  ">
-          <span className="bg-slate-700  px-2 py-1 rounded text-xs text-slate-300  ">
+        <div className="flex items-center gap-4 text-sm text-tertiary">
+          <span className="bg-tertiary px-2 py-1 rounded text-xs text-secondary">
             {post.category}
           </span>
           <span>{formatDate(post.published_at)}</span>
@@ -51,26 +51,26 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
 
         <div className="space-y-3">
           <h3
-            className={`font-display font-bold text-white   group-hover:text-accent-400  transition-colors ${
+            className={`font-display font-bold text-primary group-hover:text-accent-400 transition-colors ${
               featured ? "text-2xl md:text-3xl" : "text-xl"
             }`}
           >
             <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
           </h3>
 
-          <p className={`text-slate-300   leading-relaxed ${featured ? "text-lg" : "text-sm"}`}>
+          <p className={`text-secondary leading-relaxed ${featured ? "text-lg" : "text-sm"}`}>
             {post.excerpt}
           </p>
         </div>
 
         <div className="flex flex-wrap gap-2">
           {post.tags.slice(0, 3).map((tag) => (
-            <span key={tag} className="bg-slate-700/50  text-slate-300   px-2 py-1 rounded text-xs">
+            <span key={tag} className="bg-tertiary/50 text-secondary px-2 py-1 rounded text-xs">
               #{tag}
             </span>
           ))}
           {post.tags.length > 3 && (
-            <span className="text-slate-400   text-xs">+{post.tags.length - 3} more</span>
+            <span className="text-tertiary text-xs">+{post.tags.length - 3} more</span>
           )}
         </div>
 
@@ -79,12 +79,12 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
             <div className="w-6 h-6 bg-accent-600/20 rounded-full flex items-center justify-center">
               <span className="text-accent-400 text-xs font-bold">{post.author.charAt(0)}</span>
             </div>
-            <span className="text-slate-400   text-sm">{post.author}</span>
+            <span className="text-tertiary text-sm">{post.author}</span>
           </div>
 
           <Link
             href={`/blogs/${post.slug}`}
-            className="text-accent-400   hover:text-accent-300   transition-colors font-medium text-sm flex items-center gap-1"
+            className="text-accent-400 hover:text-accent-300 transition-colors font-medium text-sm flex items-center gap-1"
           >
             Read more
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

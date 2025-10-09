@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <ThemeScript />
       </head>
-      <body className="body-surface min-h-dvh text-slate-100 antialiased">
+      <body className="body-surface min-h-dvh text-primary antialiased" suppressHydrationWarning>
         <ThemeProvider>
           <Header />
           <main className="mx-auto max-w-7xl px-4 md:px-6 py-8 md:py-16 mt-8 md:mt-10">
@@ -43,31 +43,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 function Footer() {
   return (
-    <footer className="mt-32 border-t border-slate-700   py-12">
+    <footer className="mt-32 border-t border-primary/10 py-12">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <p className="text-slate-400   text-sm">
-              © {new Date().getFullYear()} Dang Nguyen. All rights reserved.
-            </p>
-            <p className="text-slate-500   text-xs mt-1">Built with Next.js & Tailwind CSS</p>
+            <p className="text-tertiary text-sm">© 2025 Dang Nguyen. All rights reserved.</p>
+            <p className="text-muted text-xs mt-1">Built with Next.js & Tailwind CSS</p>
           </div>
           <div className="flex items-center gap-6">
             <a
               href="mailto:dangnguyen28.work@gmail.com"
-              className="text-slate-400   hover:text-accent-300   transition-colors text-sm"
+              className="text-tertiary hover:text-accent-300 transition-colors text-sm"
             >
               Email
             </a>
             <a
               href="https://github.com/yourname"
-              className="text-slate-400   hover:text-accent-300   transition-colors text-sm"
+              className="text-tertiary hover:text-accent-300 transition-colors text-sm"
             >
               GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/yourname"
-              className="text-slate-400   hover:text-accent-300   transition-colors text-sm"
+              className="text-tertiary hover:text-accent-300 transition-colors text-sm"
             >
               LinkedIn
             </a>
